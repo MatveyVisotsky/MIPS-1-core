@@ -8,7 +8,7 @@ module main_decoder
     output              RegDst_o    ,
     output              RegWrite_o  ,
     output  [1:0]       AluOp_o     
-)
+);
 
 always_comb begin :opcode_decoding
     if(!Op_i) // R-type instruction
