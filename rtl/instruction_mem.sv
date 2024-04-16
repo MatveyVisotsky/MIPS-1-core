@@ -7,5 +7,10 @@ module instruction_mem
 reg [31:0] instr_mem_r[31:0];
 
 assign instruction_o[31:0] = instr_mem_r[address_i];
+
+initial
+begin
+    $readmemh("program.txt", instr_mem_r);    
+end
     
 endmodule
